@@ -4,7 +4,7 @@ const patients = [
     name: "Kanishka",
     age: 18,
     gender: "Female",
-    bedNo: "B12",
+    bedNo: "A04",
     lastUpdated: "Today",
     vitals: [
       { name: "Blood Pressure", value: "120/80 mmHg", analysis: "normal" },
