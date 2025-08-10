@@ -12,26 +12,30 @@ const PatientCard = ({ patient }) => {
         {/* Header */}
         <div>
           <div className="flex items-center gap-3 mb-1">
-            <FaUser size={42} className="text-blue-600" />
+            <FaUser size={30} className="text-blue-600" />
             <div>
               <h3 className="font-semibold text-lg sm:text-xl text-blue-600">
                 {patient.name}
               </h3>
-              <p className="text-xs text-blue-400">ID: {patient.id}</p> {/* Displaying ID */}
+           
             </div>
           </div>
 
           {/* Details in two columns */}
-          <div className="grid grid-cols-2 gap-x-4 text-sm sm:text-base text-blue-600">
-            <p>
-              <span className="font-semibold">Age:</span> {patient.age}
-            </p>
-            <p>
-              <span className="font-semibold">Gender:</span> {patient.gender}
+          <div className="grid grid-cols-2 gap-x-0 mt-5 text-sm sm:text-base text-blue-600">
+             <p>
+              <span className="font-semibold">Patient ID:</span> {patient.id}
             </p>
             <p>
               <span className="font-semibold">Bed:</span> {patient.bedNo}
             </p>
+            <p>
+              <span className="font-semibold">Age:</span> {patient.age}
+            </p>
+            <p>
+              <span className="font-semibold">Gender: </span>{patient.gender}
+            </p>
+            
           </div>
         </div>
 

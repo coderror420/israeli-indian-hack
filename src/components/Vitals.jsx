@@ -9,7 +9,7 @@ const Vitals = () => {
       {patients.map((patient) => (
         <Link to={"patient/" + patient.id}><PatientCard key={patient.id} patient={patient} /></Link>
       ))}
-      {[...Array(5)].map((_, index) => (
+      {[...Array(6)].map((_, index) => (
         <PatientCard key={`empty-${index}`} />
       ))}
     </div>
