@@ -1,18 +1,15 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import PatientCard from "./PatientCard";
+import patients from "../utils/patients";
 
 const Vitals = () => {
-  const patients = [
-     { name: "Kanishka", age: 18, gender: "Female", bedNo: "B12", lastUpdated: "Today" },
-  { name: "Mannan", age: 19, gender: "Male", bedNo: "A05", lastUpdated: "Yesterday" },
-  ];
-
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 p-6">
-      {patients.map((patient, index) => (
-        <PatientCard key={index} patient={patient} />
+      {patients.map((patient) => (
+        <Link to={"patient/" + patient.id}><PatientCard key={patient.id} patient={patient} /></Link>
       ))}
-      {[...Array(6)].map((_, index) => (
+      {[...Array(5)].map((_, index) => (
         <PatientCard key={`empty-${index}`} />
       ))}
     </div>

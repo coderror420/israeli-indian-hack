@@ -5,21 +5,33 @@ import { FiPlus } from "react-icons/fi";
 const PatientCard = ({ patient }) => {
   if (patient) {
     return (
-      <div className="bg-blue-100 rounded-xl p-5 sm:p-6 flex flex-col shadow-md min-h-[180px] sm:min-h-[220px] w-full justify-between">
+      <div
+        className="bg-blue-100 rounded-xl p-5 sm:p-6 flex flex-col shadow-md min-h-[180px] sm:min-h-[220px] w-full justify-between"
+        // If you want to use id for any reason like click handlers, add it here or in parent
+      >
         {/* Header */}
         <div>
-          <div className="flex items-center gap-3 mb-4">
+          <div className="flex items-center gap-3 mb-1">
             <FaUser size={42} className="text-blue-600" />
-            <h3 className="font-semibold text-lg sm:text-xl text-blue-600">
-              {patient.name}
-            </h3>
+            <div>
+              <h3 className="font-semibold text-lg sm:text-xl text-blue-600">
+                {patient.name}
+              </h3>
+              <p className="text-xs text-blue-400">ID: {patient.id}</p> {/* Displaying ID */}
+            </div>
           </div>
 
           {/* Details in two columns */}
           <div className="grid grid-cols-2 gap-x-4 text-sm sm:text-base text-blue-600">
-            <p><span className="font-semibold">Age:</span> {patient.age}</p>
-            <p><span className="font-semibold">Gender:</span> {patient.gender}</p>
-            <p><span className="font-semibold">Bed:</span> {patient.bedNo}</p>
+            <p>
+              <span className="font-semibold">Age:</span> {patient.age}
+            </p>
+            <p>
+              <span className="font-semibold">Gender:</span> {patient.gender}
+            </p>
+            <p>
+              <span className="font-semibold">Bed:</span> {patient.bedNo}
+            </p>
           </div>
         </div>
 
