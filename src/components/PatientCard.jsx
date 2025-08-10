@@ -40,7 +40,7 @@ const PatientCard = ({ patient }) => {
         </div>
 
         {/* Last updated bottom-right */}
-        <div className="flex items-center justify-end mt-4 text-sm sm:text-base text-blue-600">
+        <div className="flex items-center justify-end mt-4 text-sm sm:text-sm text-blue-600">
           <FaClock size={14} className="mr-2" />
           <span>Last updated: {patient.lastUpdated}</span>
         </div>
