@@ -14,7 +14,7 @@ const PatientCard = ({ patient }) => {
           <div className="flex items-center gap-3 mb-1">
             <FaUser size={30} className="text-blue-600" />
             <div>
-              <h3 className="font-semibold text-lg sm:text-xl text-blue-600">
+              <h3 className="font-semibold text-lg sm:text-l text-blue-600">
                 {patient.name}
               </h3>
            
@@ -22,7 +22,7 @@ const PatientCard = ({ patient }) => {
           </div>
 
           {/* Details in two columns */}
-          <div className="grid grid-cols-2 gap-x-0 mt-5 text-sm sm:text-base text-blue-600">
+          <div className="grid grid-cols-2 mt-8 gap-x-5 text-sm sm:text-sm text-blue-600">
              <p>
               <span className="font-semibold">Patient ID:</span> {patient.id}
             </p>
