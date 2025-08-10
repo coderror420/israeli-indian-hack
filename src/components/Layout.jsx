@@ -1,4 +1,6 @@
 import React from "react";
+import { IoIosNotifications } from "react-icons/io";
+
 import { Outlet, useLocation, useNavigate } from "react-router-dom";
 import {
   LayoutDashboard,
@@ -34,8 +36,20 @@ const Layout = () => {
       <div className="px-6 py-8 text-white">
         <div className="flex items-center justify-between mb-2">
           <h1 className="text-2xl font-bold tracking-wide">cura</h1>
-          <div className="w-10 h-10 bg-yellow-400 rounded-full flex items-center justify-center">
-            <span className="text-xl">👤</span>
+
+          <div className="flex items-center space-x-4">
+            <button
+              aria-label="Notifications"
+              className="relative text-white hover:text-yellow-300 focus:outline-none"
+            >
+              <IoIosNotifications size={30} className="text-yellow-400"/>
+              {/* Optional notification badge */}
+              {/* <span className="absolute top-0 right-0 inline-block w-2 h-2 bg-red-600 rounded-full"></span> */}
+            </button>
+
+            <div className="w-10 h-10 bg-yellow-400 rounded-full flex items-center justify-center">
+              <span className="text-xl">👤</span>
+            </div>
           </div>
         </div>
         <p className="text-blue-100 text-lg">Hello, Kanishka 🥰</p>
@@ -55,7 +69,6 @@ const Layout = () => {
             <Outlet />
           </div>
 
-          {/* Bottom Navigation */}
           {/* Bottom Navigation */}
           <div className="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-100 z-50">
             <div className="flex justify-around items-center py-4 px-4">
